@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import ResponsiveAppBar from './component/navbar';
+import AboutMe from './component/About_Me';
+import Skills from './component/Skills';
+import Experiences from './component/Experiences';
+import ParticlesComponent from './component/particles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='home' 
+      style={
+        {
+          // backgroundColor: "#303030",
+          display: "flex",
+          flexDirection: "column",
+          flexWrap: "wrap",
+          alignItems: "center",
+          zIndex: 0
+        }
+      }>
+      <ResponsiveAppBar />
+      <AboutMe />
+      <Skills />
+      <Experiences />
+      <ParticlesComponent id="particles"/>
     </div>
   );
 }

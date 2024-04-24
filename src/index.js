@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const w3StyleSheet = document.createElement('link');
+w3StyleSheet.rel = 'stylesheet';
+w3StyleSheet.href = 'https://www.w3schools.com/w3css/4/w3.css';
+document.head.appendChild(w3StyleSheet);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
