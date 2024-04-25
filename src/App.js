@@ -5,13 +5,15 @@ import AboutMe from './component/About_Me';
 import Skills from './component/Skills';
 import Experiences from './component/Experiences';
 import ParticlesComponent from './component/particles';
+import Projects from './component/Projects';
+import MyAvatar from './component/MyAvatar';
 
 function App() {
   return (
     <div className='home' 
       style={
         {
-          // backgroundColor: "#303030",
+          margin: 0,
           display: "flex",
           flexDirection: "column",
           flexWrap: "wrap",
@@ -20,9 +22,11 @@ function App() {
         }
       }>
       <ResponsiveAppBar />
+      <MyAvatar />
       <AboutMe />
       <Skills />
       <Experiences />
+      <Projects />
       <ParticlesComponent id="particles"/>
     </div>
   );

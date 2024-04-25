@@ -6,7 +6,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 
 
 export default function Experiences() {
@@ -19,7 +19,7 @@ export default function Experiences() {
           setIsVisible(entry.isIntersecting);
         },
         {
-          threshold: 0,
+          threshold: 0
         }
       );
       if (ref.current) {
@@ -33,185 +33,155 @@ export default function Experiences() {
     }, []);
 
   return ( 
-    <div className='formations-experiences' style={{width:"100%", display:"flex", flexDirection:"row", alignItems: "flex-start", justifyContent:"space-evenly" ,color: "white"}}>
-      <Timeline className='formations'  position="alternate" sx={{maxWidth:"45%", alignItems: "center"}}>
-        <h2 style={{margin: "40px 0", fontFamily:"monospace", fontSize:"3rem"}}>Formations</h2>
-        <TimelineItem sx={{width: "90%" }}>
+    <div  className='formations-experiences' style={{width:"100%",marginTop:"50px", display:"flex", flexDirection:"row", alignItems: "flex-start", justifyContent:"space-evenly" ,color: "white"}}>
+      <Timeline ref={ref}  className='formations'  position="alternate" sx={{maxWidth:"45%", alignItems: "center"}}>
+        <h2  style={{margin: "70px 0", fontFamily:"monospace", fontSize:"3rem"}}>&#123; Formations &#125;</h2>
+        <TimelineItem sx={{width: "100%" }}>
         <TimelineOppositeContent color="text.secondary">
-           <h4 style={{margin:"0px"}}>12/2023 à aujourd'hui</h4> 
+           <h4 style={{margin:"0px", color: "white"}}>Septembre 2023 à décembre 2023</h4> 
         </TimelineOppositeContent>
         <TimelineSeparator sx={{margin: "0px 10px"}}>
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent ref={ref} className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace"}}>
-            <h4 style={{margin:"0px"}}><ArrowForwardIosIcon /> Bachelor 3 Développeur Web</h4>
-            <h5> My Digital School Nantes</h5>
-            <ul>
-              <li>Application web</li>
-              <li>Développement SQL</li>
-              <li>Développement API</li>
-              <li>Gestion de projet</li>
-              <li>Conception logicielle</li>
-            </ul>               
+        <TimelineContent  className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+            <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Bachelor 3 Développement Web </h4>
+            <h5 style={{fontFamily:"inherit"}}>&#8883; My Digital School Nantes</h5>
+              <div>Application web</div>
+              <div>Développement SQL</div>
+              <div>Développement API</div>
+              <div>Gestion de projet</div>
+              <div>Conception logicielle</div>               
         </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem sx={{width: "90%"}}>
+        <TimelineItem sx={{width: "100%" }}>
         <TimelineOppositeContent color="text.secondary">
-            <h4 style={{margin:"0px"}}>09/2023 à 12/2023</h4> 
+           <h4 style={{margin:"0px", color: "white"}}>Février 2023 à août 2023</h4> 
         </TimelineOppositeContent>
         <TimelineSeparator sx={{margin: "0px 10px"}}>
-            <TimelineDot />
-            <TimelineConnector />
+          <TimelineDot />
+          <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>Développement Front-End</div>
-            <div>Développement Back-End</div>
-            <div>Gestion de projet</div>            
+        <TimelineContent  className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+            <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Développeur Web Full Stack </h4>
+            <h5 style={{fontFamily:"inherit"}}>&#8883; 3WAcademy</h5>
+              <div>Développement Front-End</div>
+              <div>Développement Back-End</div>
+              <div>Gestion de projet</div>               
         </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem sx={{width: "90%"}}>
+        <TimelineItem sx={{width: "100%" }}>
         <TimelineOppositeContent color="text.secondary">
-        <h4 style={{margin:"0px"}}>02/2023 à 08/2023</h4>
+           <h4 style={{margin:"0px", color: "white"}}>Septembre 2017 à 2018</h4> 
         </TimelineOppositeContent>
         <TimelineSeparator sx={{margin: "0px 10px"}}>
-            <TimelineDot />
-            <TimelineConnector />
+          <TimelineDot />
+          <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>            
+        <TimelineContent  className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+            <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Licence 1 MIP </h4>
+            <h5 style={{fontFamily:"inherit"}}>&#8883; Université de Nantes</h5>
+              <div>Mathématique</div>
+              <div>Physique</div>
+              <div>Informatique</div>              
         </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem sx={{width: "90%"}}>
+        <TimelineItem sx={{width: "100%" }}>
         <TimelineOppositeContent color="text.secondary">
-            12:00 am
+           <h4 style={{margin:"0px", color: "white"}}>Septembre 2015 à juin 2016</h4> 
         </TimelineOppositeContent>
         <TimelineSeparator sx={{margin: "0px 10px"}}>
-            <TimelineDot />
-            <TimelineConnector />
+          <TimelineDot />
+          <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>            
+        <TimelineContent  className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+            <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; DAEU B : Equivalence bac Scientifique</h4>
+            <h5 style={{fontFamily:"inherit"}}>&#8883; Université de Nantes</h5>
+              <div>Mathematiques</div>
+              <div>Physique</div>
+              <div>Informatique</div>               
         </TimelineContent>
         </TimelineItem>
-
-        <TimelineItem sx={{width: "90%"}}>
-        <TimelineOppositeContent color="text.secondary">
-            9:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{margin: "0px 10px"}}>
-            <TimelineDot />
-            <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{margin: "20px 0 20px 10px", marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>            
-        </TimelineContent>
-      </TimelineItem>
+        
     </Timeline>
     
-    <div className='divider' style={{width:"1.5px", height:"750px", marginTop: "150px",backgroundColor: "#212121"}}></div>
+
+
+    <div className='divider' style={{width:"2px", height:"750px", marginTop: "250px",backgroundColor: "white"}}></div>
+
+
 
     <Timeline className='experiences'  position="alternate" sx={{maxWidth:"45%", alignItems: "center"}}>
-        <h2 style={{margin: "40px 0", fontFamily:"monospace", fontSize:"3rem"}}>Experiences</h2>
-        <TimelineItem sx={{width: "90%"}}>
+        <h2  style={{margin: "70px 0", fontFamily:"monospace", fontSize:"3rem"}}>&#123; Experiences &#125;</h2>
+        <TimelineItem sx={{width: "100%" }}>
         <TimelineOppositeContent color="text.secondary">
-           <h4 style={{margin:"0px"}}>12/2023 à aujourd'hui</h4> 
+           <h4 style={{margin:"0px", color: "white"}}>Depuis août 2023</h4> 
         </TimelineOppositeContent>
         <TimelineSeparator sx={{margin: "0px 10px"}}>
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent ref={ref} className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>            
+        <TimelineContent  className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+            <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Projets personnels </h4>
+            <h5 style={{fontFamily:"inherit"}}>&#8883; Applications web</h5>
+              <div>Technos et outils :</div>
+              <div>React.js, MaterialUi, Node.js, MySQL, MongoDB, VScode, phpMyAdmin, Midjourney, GitHub</div>               
         </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem sx={{width: "90%"}}>
+        <TimelineItem sx={{width: "100%" }}>
         <TimelineOppositeContent color="text.secondary">
-            <h4 style={{margin:"0px"}}>09/2023 à 12/2023</h4> 
+           <h4 style={{margin:"0px", color: "white"}}>Juin 2023 à juillet 2023</h4> 
         </TimelineOppositeContent>
         <TimelineSeparator sx={{margin: "0px 10px"}}>
-            <TimelineDot />
-            <TimelineConnector />
+          <TimelineDot />
+          <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>            
+        <TimelineContent  className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+            <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784;Projet de fin de Formation : Esotales</h4>
+            <h5 style={{fontFamily:"inherit"}}>&#8883; My Digital School Nantes</h5>
+              <div><strong>Blog sur le mmorpg The Elder Scrolls online</strong></div>
+              <div><strong>front-end</strong> : javascript, html/css</div>
+              <div><strong>back-end</strong> : node.js, express.js, ejs</div>        
         </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem sx={{width: "90%"}}>
+        <TimelineItem sx={{width: "100%" }}>
         <TimelineOppositeContent color="text.secondary">
-        <h4 style={{margin:"0px"}}>02/2023 à 08/2023</h4>
+           <h4 style={{margin:"0px", color: "white"}}>Juillet 2023</h4> 
         </TimelineOppositeContent>
         <TimelineSeparator sx={{margin: "0px 10px"}}>
-            <TimelineDot />
-            <TimelineConnector />
+          <TimelineDot />
+          <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>            
+        <TimelineContent  className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+            <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Stage Développement Web </h4>
+            <h5 style={{fontFamily:"inherit"}}>&#8883; Ascad44 </h5>
+              <div>Travaux de developpement pour le site vitrine</div>
+              <div>html, css, javascript</div>               
         </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem sx={{width: "90%"}}>
+        <TimelineItem sx={{width: "100%" }}>
         <TimelineOppositeContent color="text.secondary">
-            12:00 am
+           <h4 style={{margin:"0px", color: "white"}}>Janvier 2018 à 2021</h4> 
         </TimelineOppositeContent>
         <TimelineSeparator sx={{margin: "0px 10px"}}>
-            <TimelineDot />
-            <TimelineConnector />
+          <TimelineDot />
+          <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>            
+        <TimelineContent  className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+            <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Employé polyvalent </h4>
+            <h5 style={{fontFamily:"inherit"}}>&#8883; E.Leclerc Atlantis Drive</h5>           
         </TimelineContent>
         </TimelineItem>
-
-        <TimelineItem sx={{width: "90%"}}>
-        <TimelineOppositeContent color="text.secondary">
-            9:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{margin: "0px 10px"}}>
-            <TimelineDot />
-            <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{margin: "20px 0 20px 10px", marginBottom:"40px", bgcolor: "white"}}>
-            <h4 style={{margin:"0px"}}>title 4</h4>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>
-            <div>lorem ipsum</div>            
-        </TimelineContent>
-      </TimelineItem>
     </Timeline>
+    
 </div>  
     
   );
 }
 
-// opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.5s ease, visibility 0.5s ease;
-// , opacity: 0, visibility: "hidden", transition: "opacity 0.5s ease, visibility 0.5s ease"

@@ -33,14 +33,13 @@ function Skills() {
     }, []);
   
     return (
-      <div className={`skills `} ref={ref} style={{ display: "flex" ,width: "100%", flexDirection: "column", margin: "40px 0px"}}>
+      <div  className={`skills `}  style={{ display: "flex" ,width: "100%", flexDirection: "column", margin: "40px 0px", color: "white"}}>
         <a href="#skills" aria-hidden="true" id="skills"></a>
         <h2  style={{width: "100%", display: "flex" ,justifyContent: "center", fontFamily:"monospace", fontSize:"3rem", margin: "75px 0px"}}>
-          
-          SKILLS
+          &#123; SKILLS &#125;
         </h2>
         <div style={{width: "100%", display: "flex", flexDirection:"row", justifyContent: "space-evenly", flexWrap:"nowrap"}}>
-          <Card className={`w3-center ${isVisible ? 'w3-animate-left' : ''}`} sx={{ maxWidth: 600, maxHeight: 1000, backgroundColor: '#212121' }}>
+          <Card ref={ref} className={`w3-center ${isVisible ? 'w3-animate-left' : ''}`} sx={{ maxWidth: 600, maxHeight: 1000, backgroundColor: '#212121', color: "white" }}>
             <CardActionArea sx={{display:'flex', flexDirection: 'column'}}>
               <h3 style={{ fontFamily:"monospace" }}>FrontEnd</h3>
               <CardMedia sx={{width: "50%"}}
@@ -49,13 +48,13 @@ function Skills() {
                 image={frontend}
                 alt="FrontEnd"
               />
-              <CardContent sx={{display: "flex", justifyContent: "center", width: "100%"}}>
+              <CardContent sx={{display: "flex", justifyContent: "center", width: "100%",fontFamily:"monospace"}}>
                 <FrontEndSkillsList />
               </CardContent>
             </CardActionArea>
           </Card>
   
-          <Card className={`w3-center ${isVisible ? 'w3-animate-right' : ''}`} sx={{ maxWidth: 600, maxHeight: 1000, backgroundColor: '#212121' }}>
+          <Card className={`w3-center ${isVisible ? 'w3-animate-right' : ''}`} sx={{ maxWidth: 600, maxHeight: 1000, backgroundColor: '#212121', color: "white" }}>
             <CardActionArea sx={{display:'flex', flexDirection: 'column'}}>
               <h3 style={{ fontFamily:"monospace" }}>BackEnd</h3>
               <CardMedia sx={{width: "50%"}}
@@ -64,13 +63,13 @@ function Skills() {
                 image={backend}
                 alt="BackEnd"
               />
-              <CardContent sx={{display: "flex", justifyContent: "center", width: "100%"}}>
+              <CardContent  sx={{display: "flex", justifyContent: "center", width: "100%"}}>
               <BackEndSkillsList />   
               </CardContent>
             </CardActionArea>
           </Card>
         </div>
-      </div>
+      </div >
     );
   }
   
@@ -79,56 +78,4 @@ function Skills() {
 
 
 
-  // function Skills() {
-//   return (
-//     <div className='skills w3-center w3-animate-bottom'>
-//         <h2>SKILLS</h2>
-//         <div  style={{display: "flex"}}>
-//         <Card sx={{ maxWidth: 600, maxHeight: 1000, backgroundColor: '#212121' }}>
-//             <CardActionArea>
-//                 <h3>FrontEnd</h3>
-//                 <CardMedia
-//                 component="img"
-//                 height="512"
-//                 image={frontend}
-//                 alt="green iguana"
-//                 />
-//                 <CardContent>
-//                 <Typography gutterBottom variant="h5" component="div">
-                    
-//                 </Typography>
-//                 <Typography variant="body2" color="text.secondary">
-//                     Lizards are a widespread group of squamate reptiles, with over 6,000
-//                     species, ranging across all continents except Antarctica
-//                 </Typography>
-//                 </CardContent>
-//             </CardActionArea>
-//         </Card>
-
-//         <Card sx={{ maxWidth: 600, maxHeight: 1000, backgroundColor: '#212121'}}>
-//             <CardActionArea>
-//                 <h3>BackEnd</h3>
-//                 <CardMedia
-//                 component="img"
-//                 height="512"
-//                 image={backend}
-//                 alt="green iguana"
-//                 />
-//                 <CardContent>
-//                 <Typography gutterBottom variant="h5" component="div">
-                    
-//                 </Typography>
-//                 <Typography variant="body2" color="text.secondary">
-//                     Lizards are a widespread group of squamate reptiles, with over 6,000
-//                     species, ranging across all continents except Antarctica
-//                 </Typography>
-//                 </CardContent>
-//             </CardActionArea>
-//         </Card>
-//         </div>
-        
-//     </div>
-//   )
-// }
-
-// export default Skills
+ 

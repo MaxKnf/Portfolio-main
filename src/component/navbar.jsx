@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 // import myPicture from"
 
@@ -93,7 +92,7 @@ function ResponsiveAppBar() {
 
           
 
-          <Avatar alt="Maxime Kiniffo" src="https://i.ibb.co/DMCqjRq/moi-cv2.jpg" sx={{ width: 56, height: 56}}/>
+          
         </Toolbar>
       </Container>
     </AppBar>

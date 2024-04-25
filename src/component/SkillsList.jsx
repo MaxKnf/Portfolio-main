@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import htmlcsslogo from "../static/images/htmlcsslogo.png"
 import jslogo from "../static/images/jslogo.png"
@@ -18,13 +18,24 @@ import sqllogo from "../static/images/sqllogo.png"
 
 
 export function FrontEndSkillsList() {
+    
+  const theme = createTheme({
+      typography: {
+        fontFamily: [
+          'monospace',
+        ].join(','),
+      },
+    });
+
+
     return (
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: '#212121' }}>
-          <ListItem  sx={{display: "flex", alignItems: "center"}}>
+      <ThemeProvider theme={theme}>
+        <List sx={{ width: '100%', maxWidth: 360, bgcolor: '#212121', fontFamily: "monospace", fontSize: "2rem" }}>
+          <ListItem  sx={{display: "flex", alignItems: "center", fontFamily:"monospace"}}>
             <ListItemAvatar>
               <Avatar alt="Html Css logo" src={htmlcsslogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee'}}/>
             </ListItemAvatar>
-            <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
+            <ListItemText className='list-item-text' sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
               primary="HTML/CSS"
             />
           </ListItem>
@@ -56,48 +67,59 @@ export function FrontEndSkillsList() {
             />
           </ListItem>
         </List>
+        </ThemeProvider>  
     );
 }
 
 
 export function BackEndSkillsList() {
+    const theme = createTheme({
+      typography: {
+        fontFamily: [
+          'monospace',
+        ].join(','),
+      },
+    });
+
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: '#212121' }}>
-      <ListItem sx={{display: "flex", alignItems: "center"}}>
-        <ListItemAvatar>
-          <Avatar alt="Nodejs logo" src={nodelogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee'}}/>
-        </ListItemAvatar>
-        <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
-          primary="NODE.JS"
-        />
-      </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem sx={{display: "flex", alignItems: "center"}}>
-        <ListItemAvatar>
-          <Avatar alt="Expressjs logo" src={expresslogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee' }}/>
-        </ListItemAvatar>
-        <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
-          primary="EXPRESS.JS"
-        />
-      </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem sx={{display: "flex", alignItems: "center"}}>
-        <ListItemAvatar>
-          <Avatar alt="MongoDB logo" src={mongodblogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee' }}/>
-        </ListItemAvatar>
-        <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
-          primary="MONGO DB"
-        />
-      </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem sx={{display: "flex", alignItems: "center"}}>
-        <ListItemAvatar>
-          <Avatar alt="MySQL logo" src={sqllogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee' }}/>
-        </ListItemAvatar>
-        <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
-          primary="MYSQL"
-        />
-      </ListItem>
-    </List>
+    <ThemeProvider theme={theme}>
+      <List sx={{ width: '100%', maxWidth: 360, bgcolor: '#212121' }}>
+        <ListItem sx={{display: "flex", alignItems: "center"}}>
+          <ListItemAvatar>
+            <Avatar alt="Nodejs logo" src={nodelogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee'}}/>
+          </ListItemAvatar>
+          <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
+            primary="NODE.JS"
+          />
+        </ListItem>
+        <Divider variant="inset" component="li" />
+        <ListItem sx={{display: "flex", alignItems: "center"}}>
+          <ListItemAvatar>
+            <Avatar alt="Expressjs logo" src={expresslogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee' }}/>
+          </ListItemAvatar>
+          <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
+            primary="EXPRESS.JS"
+          />
+        </ListItem>
+        <Divider variant="inset" component="li" />
+        <ListItem sx={{display: "flex", alignItems: "center"}}>
+          <ListItemAvatar>
+            <Avatar alt="MongoDB logo" src={mongodblogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee' }}/>
+          </ListItemAvatar>
+          <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
+            primary="MONGO DB"
+          />
+        </ListItem>
+        <Divider variant="inset" component="li" />
+        <ListItem sx={{display: "flex", alignItems: "center"}}>
+          <ListItemAvatar>
+            <Avatar alt="MySQL logo" src={sqllogo}  sx={{ width: 56, height: 56, bgcolor: '#eeeeee' }}/>
+          </ListItemAvatar>
+          <ListItemText sx={{display: "flex", flexDirection:"row", justifyContent:"space-around"}}
+            primary="MYSQL"
+          />
+        </ListItem>
+      </List>
+      </ThemeProvider>
 );
 }
