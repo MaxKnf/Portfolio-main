@@ -7,6 +7,7 @@ import Experiences from './component/Experiences';
 import ParticlesComponent from './component/particles';
 import Projects from './component/Projects';
 import MyAvatar from './component/MyAvatar';
+import ContactMe from './component/ContactMe';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Experiences />
       <Projects />
       <ParticlesComponent id="particles"/>
+      <ContactMe />
     </div>
   );
 }

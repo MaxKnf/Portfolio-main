@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect, useRef } from 'react'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -31,6 +31,17 @@ createData(
 */
 
 const rows = [
+  createData(
+    'Sakura Wave', 
+    "Site vitrine d'un restaurant japonais", 
+    "Javascript, React.js", 
+    {
+        github:"https://github.com/MaxKnf/sakura-wave",
+        website: "https://sakura-wave-food.netlify.app/"
+    }, 
+    <GitHubIcon />, 
+    <LanguageIcon />
+    ),
     createData(
     'PORTFOLIO', 
     "mon portfolio", 
@@ -45,21 +56,21 @@ const rows = [
     createData(
     'ESOTALES-V2', 
     "V2 de mon projet de fin d'année à la 3WA (projet personnel) - fake database avec des composants react", 
-    "Javascript, React.js",
+    "Javascript, React.js, MaterialUI",
     { 
-        github:"https://github.com/MaxKnf/EsoTales-ReactJS-NodesJS---Bis/tree/master/client",  
-        website: null
+        github:"https://github.com/MaxKnf/Esotales_main",  
+        website: "https://esotales-maxime-kiniffo.netlify.app/"
     } , 
     <GitHubIcon />, 
-    null 
+    <LanguageIcon />
     ),
     createData(
     'POKEDEX', 
-    "pokedex statique - appel d'API pour les données - REFONTE REACT/MATERIALUI à venir", 
-    "Html/Css/javascript",
+    "pokedex (encyclopédie pokemon) avec appel API", 
+    "Javascript, React.js,  W3.CSS",
     { 
-        github:"https://github.com/MaxKnf/Pokedex",  
-        website: "https://pokedex-from-efil.netlify.app/"
+        github:"https://github.com/MaxKnf/pokedex-react",  
+        website: "https://pokedex-maxime-kiniffo.netlify.app/"
     } , 
     <GitHubIcon />, 
     <LanguageIcon />
@@ -90,6 +101,8 @@ const rows = [
 
 export default function Projects() {
 
+   
+
     const theme = createTheme({
         typography: {
           fontFamily: [
@@ -99,32 +112,33 @@ export default function Projects() {
       });
 
   return (
-    <ThemeProvider theme={theme}>
-    <div style={{ width: '90%',marginTop: "80px", display:"flex", flexDirection:"column", alignItems: "center", color:"white"}}>
-        <h2  style={{margin: "100px 0", fontFamily:"monospace", fontSize:"3rem"}}>&#123; Projets &#125;</h2>
-        <a href="https://github.com/MaxKnf?tab=repositories"><GitHubIcon sx={{width:"100px", height:"100px", backgroundColor: "#212121", borderRadius:"100px" }}/></a>
-        <TableContainer className='w3-animate-zoom' component={Paper} sx={{marginTop: "50px", border:"",borderRadius: "10px"}}>
-        <Table sx={{ width: "100%", backgroundColor: "#212121",}} aria-label="simple table">
+    <ThemeProvider  theme={theme}>
+    <div   style={{ width: '90%',marginTop: "80px 0", display:"flex", flexDirection:"column", alignItems: "center", color:"white"}}>
+    <a href="#projects" aria-hidden="true" id="projects"></a>
+        <h2   style={{margin: "100px 0", fontFamily:"monospace", fontSize:"3rem"}}>&#123; Projets &#125;</h2>
+        <a  href="https://github.com/MaxKnf?tab=repositories" target="_blank"><GitHubIcon sx={{width:"100px", height:"100px", borderRadius:"100px" }}/></a>
+        <TableContainer  component={Paper} sx={{marginTop: "50px", backgroundColor: "#212121",borderRadius: "10px"}}>
+        <Table  sx={{ width: "100%", backgroundColor: "#212121",}} aria-label="simple table">
             <TableHead>
             <TableRow >
-                <TableCell sx={{ color:"white" }}><strong>NOM</strong></TableCell>
-                <TableCell sx={{ color:"white" }} >DESCRIPTION</TableCell>
-                <TableCell sx={{ color:"white" }} >LANGUAGE</TableCell>
-                <TableCell sx={{ color:"white" }} >LIEN</TableCell>
+                <TableCell sx={{ color:"white", fontSize: "1.1rem" }} ><strong>NOM</strong></TableCell>
+                <TableCell sx={{ color:"white", fontSize: "1.1rem" }} ><strong>DESCRIPTION</strong></TableCell>
+                <TableCell sx={{ color:"white", fontSize: "1.1rem" }} ><strong>LANGUAGE</strong></TableCell>
+                <TableCell sx={{ color:"white", fontSize: "1.1rem" }} ><strong>LIEN</strong></TableCell>
             </TableRow>
             </TableHead>
             <TableBody>
             {rows.map((row) => (
                 <TableRow
                 key={row.nom}
-                sx={{  border: 0}}
+                sx={{  borderTop: "2px solid rgba(224, 224, 224, 1)", borderBottom: "1px solid rgba(33, 33, 33, 1)"}}
                 >
                 <TableCell component="th" scope="row" sx={{ color:"white"}}>
                     {row.nom}
                 </TableCell>
                 <TableCell sx={{ color:"white" }} >{row.description}</TableCell>
                 <TableCell sx={{ color:"white" }} >{row.language}</TableCell>
-                <TableCell sx={{ color:"white" }} ><a href={row.link.github} target="_blank">{row.githubIcon}</a> <a href={row.link.website} target="_blank">{row.websiteIcon}</a></TableCell>
+                <TableCell sx={{ color:"white"}} ><a href={row.link.github} target="_blank">{row.githubIcon}</a> <a href={row.link.website} target="_blank">{row.websiteIcon}</a></TableCell>
                 </TableRow>
             ))}
             </TableBody>

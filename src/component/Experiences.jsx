@@ -19,7 +19,8 @@ export default function Experiences() {
           setIsVisible(entry.isIntersecting);
         },
         {
-          threshold: 0
+          threshold: 0,
+          rootMargin: '-30% 0%'
         }
       );
       if (ref.current) {
@@ -33,7 +34,8 @@ export default function Experiences() {
     }, []);
 
   return ( 
-    <div  className='formations-experiences' style={{width:"100%",marginTop:"50px", display:"flex", flexDirection:"row", alignItems: "flex-start", justifyContent:"space-evenly" ,color: "white"}}>
+    <div className={`experiences `} style={{width:"100%",marginTop:"50px", display:"flex", flexDirection:"row", alignItems: "flex-start", justifyContent:"space-evenly" ,color: "white"}}>
+      <a href="#experiences" aria-hidden="true" id="experiences"></a>
       <Timeline ref={ref}  className='formations'  position="alternate" sx={{maxWidth:"45%", alignItems: "center"}}>
         <h2  style={{margin: "70px 0", fontFamily:"monospace", fontSize:"3rem"}}>&#123; Formations &#125;</h2>
         <TimelineItem sx={{width: "100%" }}>
@@ -44,7 +46,7 @@ export default function Experiences() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent  className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+        <TimelineContent  className={`${isVisible ? 'w3-animate-zoom' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
             <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Bachelor 3 Développement Web </h4>
             <h5 style={{fontFamily:"inherit"}}>&#8883; My Digital School Nantes</h5>
               <div>Application web</div>
@@ -63,7 +65,7 @@ export default function Experiences() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent  className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+        <TimelineContent  className={`${isVisible ? 'w3-animate-zoom' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
             <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Développeur Web Full Stack </h4>
             <h5 style={{fontFamily:"inherit"}}>&#8883; 3WAcademy</h5>
               <div>Développement Front-End</div>
@@ -80,7 +82,7 @@ export default function Experiences() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent  className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+        <TimelineContent  className={`${isVisible ? 'w3-animate-zoom' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
             <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Licence 1 MIP </h4>
             <h5 style={{fontFamily:"inherit"}}>&#8883; Université de Nantes</h5>
               <div>Mathématique</div>
@@ -97,7 +99,7 @@ export default function Experiences() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent  className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+        <TimelineContent  className={`${isVisible ? 'w3-animate-zoom' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
             <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; DAEU B : Equivalence bac Scientifique</h4>
             <h5 style={{fontFamily:"inherit"}}>&#8883; Université de Nantes</h5>
               <div>Mathematiques</div>
@@ -124,7 +126,7 @@ export default function Experiences() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent  className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+        <TimelineContent  className={`${isVisible ? 'w3-animate-zoom' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
             <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Projets personnels </h4>
             <h5 style={{fontFamily:"inherit"}}>&#8883; Applications web</h5>
               <div>Technos et outils :</div>
@@ -140,7 +142,7 @@ export default function Experiences() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent  className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+        <TimelineContent  className={`${isVisible ? 'w3-animate-zoom' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
             <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784;Projet de fin de Formation : Esotales</h4>
             <h5 style={{fontFamily:"inherit"}}>&#8883; My Digital School Nantes</h5>
               <div><strong>Blog sur le mmorpg The Elder Scrolls online</strong></div>
@@ -157,7 +159,7 @@ export default function Experiences() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent  className={`${isVisible ? 'w3-animate-right' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+        <TimelineContent  className={`${isVisible ? 'w3-animate-zoom' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
             <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Stage Développement Web </h4>
             <h5 style={{fontFamily:"inherit"}}>&#8883; Ascad44 </h5>
               <div>Travaux de developpement pour le site vitrine</div>
@@ -173,7 +175,7 @@ export default function Experiences() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent  className={`${isVisible ? 'w3-animate-left' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
+        <TimelineContent  className={`${isVisible ? 'w3-animate-zoom' : ''}`} sx={{marginBottom:"40px", bgcolor: "white", backgroundColor: "#212121", fontFamily:"monospace", borderRadius: 5}}>
             <h4 style={{margin:"0px", fontFamily:"inherit"}}>&#10784; Employé polyvalent </h4>
             <h5 style={{fontFamily:"inherit"}}>&#8883; E.Leclerc Atlantis Drive</h5>           
         </TimelineContent>

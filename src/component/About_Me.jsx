@@ -15,7 +15,8 @@ function AboutMe() {
           setIsVisible(entry.isIntersecting);
         },
         {
-          threshold: 0
+          threshold: 0,
+          rootMargin: '0% 0% 0% -30%'
         }
       );
       if (ref.current) {
@@ -33,7 +34,7 @@ function AboutMe() {
         width: "80%",
         display: "flex",
         marginTop: "100px",
-        paddingBottom: "100px",
+        padding: "50px 0",
         fontFamily: 'monospace',
         flexWrap: "nowrap",
         justifyContent: "space-around",
@@ -41,6 +42,7 @@ function AboutMe() {
         backgroundColor: "#212121",
         borderRadius: 10
     }}>
+      
         {/* <Avatar
                 alt="Maxime-Kiniffo"
                 src={myPicture}
@@ -54,7 +56,7 @@ function AboutMe() {
             alignItems: "center",
         }}>
             
-            <img src={devsvg} alt="Web developper" />
+            <img style={{width: "80%"}} src={devsvg} alt="Web developper" />
         </div>
 
         <div ref={ref} className={`${isVisible ? 'w3-animate-left' : ''}`} style={{

@@ -29,7 +29,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="#about-me"
             sx={{
               mr: 2,
               fontFamily: 'monospace',
@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
             </Button>
             <Button
               component="a"
-              href="#projects"
+              href="#experiences"
               color="inherit"
               sx={{
                 ml: 2,
